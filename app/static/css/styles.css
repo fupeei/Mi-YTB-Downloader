@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+        *{
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 80vh;
+        }
+        .titulo{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .titulo-color{
+            background: linear-gradient(to right,rgb(17 24 39),rgb(17 24 39), rgb(247, 113, 113));
+            -webkit-background-clip: text;
+            background-clip: none;
+            color: transparent; 
+        }
+        input{
+            font-size: 30px;
+            width: 500px;
+        }
+        .botones{
+            display: flex;
+            gap: 20px;
+            margin-top: 2rem;
+            margin-left: 2.5rem;
+        }
+        button{
+            height: 50px;
+            width: 200px;
+            background-color: rgb(156, 43, 43);
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: all 0.6s ease;
+            cursor: pointer;
+        }
+        button:hover{
+            transition: all 0.6s ease;
+            filter: brightness(80%);
+        }
+        .mensaje-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .mensaje{
+            margin-top: 2rem;
+        background-color: rgb(204, 255, 205); /* bg-blue-100 */
+        color: #1a5d1c; /* text-blue-800 */
+        font-size: 20px; /* text-xs */
+        font-weight: 500; /* font-medium */
+        margin-right: 0.5rem; /* me-2 */
+        padding-left: 0.625rem; /* px-2.5 */
+        padding-right: 0.625rem; /* px-2.5 */
+        padding-top: 0.125rem; /* py-0.5 */
+        padding-bottom: 0.125rem; /* py-0.5 */
+        border-radius: 0.25rem; /* rounded */
+        }
+        h2{
+            margin-bottom: 2rem;
+        }
+        #barraDeCargaContainer {
+            display: none;
+            height: 200px;
+            margin-top: 3rem;
+        }
+        #breathing-button {
+            height: 250px;
+            -webkit-animation: breathing 8s ease-out infinite normal;
+            animation: breathing 8s ease-out infinite normal;
+            -webkit-font-smoothing: antialiased;
+            }
+        
+        
+            @-webkit-keyframes breathing {
+            0% {
+                -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+            }
+            
+            25% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            
+            60% {
+                -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+            }
+            
+            100% {
+                -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+            }
+            }
+            
+            @keyframes breathing {
+            0% {
+                -webkit-transform: scale(0.9);
+                -ms-transform: scale(0.9);
+                transform: scale(0.9);
+            }
+            
+            25% {
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                transform: scale(1);
+            }
+            
+            60% {
+                -webkit-transform: scale(0.9);
+                -ms-transform: scale(0.9);
+                transform: scale(0.9);
+            }
+            
+            100% {
+                -webkit-transform: scale(0.9);
+                -ms-transform: scale(0.9);
+                transform: scale(0.9);
+            }
+            }
+        
