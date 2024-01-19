@@ -3,7 +3,7 @@ from flask import render_template, request, redirect, Response, send_file, flash
 from pytube import YouTube
 import os
 
-@app.route("/home")
+@app.route("/")
 def home():
     return render_template("home.html")
 
@@ -20,7 +20,7 @@ def convierte1():
         print("Hubo un error al descargar el video del URL proporcionado")
     print("¡Descarga completada con éxito!")
     flash("¡Descarga completada con éxito!")
-    return redirect("/home")
+    return redirect("/")
 
 @app.route("/convierte2", methods=['POST'])
 def convierte2():
@@ -38,4 +38,4 @@ def convierte2():
     # save the file 
     print("¡Descarga completada con éxito!")
     flash("¡Descarga completada con éxito!")
-    return redirect("/home")
+    return redirect("/")
