@@ -3,6 +3,8 @@ from flask import render_template, request, redirect, Response, send_file, flash
 from pytube import YouTube
 import os
 
+path = os.getcwd() + "/output/"
+
 @app.route("/")
 def home():
     return render_template("home.html")
@@ -15,12 +17,13 @@ def convierte1():
     yt = YouTube(url)
     yt = yt.streams.get_highest_resolution()
     try:
-        yt.download("/Users/cooka/Downloads/")
+        yt.download(path)
+        p = path + yt.title + ".mp4"
     except:
         print("Hubo un error al descargar el video del URL proporcionado")
     print("¡Descarga completada con éxito!")
     flash("¡Descarga completada con éxito!")
-    return redirect("/")
+    return send_file(p, as_attachment=True)
 
 @app.route("/convierte2", methods=['POST'])
 def convierte2():
@@ -29,13 +32,13 @@ def convierte2():
     video = yt.streams.filter(only_audio=True).first() 
     
     try:
-        out_file = video.download("/Users/cooka/Downloads/")
+        out_file = video.download(path)
         base, ext = os.path.splitext(out_file) 
-        new_file = base + '.mp3'
-        os.rename(out_file, new_file)
+        p = base + '.mp3'
+        os.rename(out_file, p)
+        flash("¡Descarga completada con éxito!")
     except:
         print("Hubo un error al descargar el video del URL proporcionado")
     # save the file 
     print("¡Descarga completada con éxito!")
-    flash("¡Descarga completada con éxito!")
-    return redirect("/")
+    return send_file(p, as_attachment=True)
