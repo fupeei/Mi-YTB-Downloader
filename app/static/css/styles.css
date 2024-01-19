@@ -76,7 +76,7 @@
             margin-top: 3rem;
         }
         #breathing-button {
-            height: 250px;
+            height: 100px;
             -webkit-animation: breathing 8s ease-out infinite normal;
             animation: breathing 8s ease-out infinite normal;
             -webkit-font-smoothing: antialiased;

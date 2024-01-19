@@ -3,7 +3,7 @@ from flask import render_template, request, redirect, Response, send_file, flash
 from pytube import YouTube
 import os
 
-@app.route("/")
+@app.route("/home")
 def home():
     return render_template("home.html")
 
