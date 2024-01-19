@@ -23,7 +23,7 @@ def convierte1():
         print("Hubo un error al descargar el video del URL proporcionado")
     print("¡Descarga completada con éxito!")
     flash("¡Descarga completada con éxito!")
-    return send_file(p, as_attachment=True)
+    return send_file(p, as_attachment=True), redirect ("/")
 
 @app.route("/convierte2", methods=['POST'])
 def convierte2():
