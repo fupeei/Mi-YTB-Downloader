@@ -13,7 +13,6 @@ def home():
 def convierte1():
     url = request.form['url']
     print(url)
-    destino = "Descargas"
     yt = YouTube(url)
     yt = yt.streams.get_highest_resolution()
     try:
@@ -23,7 +22,7 @@ def convierte1():
         print("Hubo un error al descargar el video del URL proporcionado")
     print("¡Descarga completada con éxito!")
     flash("¡Descarga completada con éxito!")
-    return send_file(p, as_attachment=True), redirect ("/")
+    return send_file(p, as_attachment=True)
 
 @app.route("/convierte2", methods=['POST'])
 def convierte2():
