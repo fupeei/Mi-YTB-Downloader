@@ -15,14 +15,16 @@ def convierte1():
     print(url)
     yt = YouTube(url)
     yt = yt.streams.get_highest_resolution()
+    
     try:
         yt.download(path)
         p = path + yt.title + ".mp4"
     except:
         print("Hubo un error al descargar el video del URL proporcionado")
     print("¡Descarga completada con éxito!")
-    flash("¡Descarga completada con éxito!")
-    return send_file(p, as_attachment=True)
+    
+    flash("¡Procesado completado con éxito!")
+    return send_file(p,  as_attachment=True)
 
 @app.route("/convierte2", methods=['POST'])
 def convierte2():

@@ -3,7 +3,9 @@ function iniciarCarga() {
     var barraDeCarga = document.getElementById("barraDeCarga");
 
     // Mostrar la barra de carga
-    barraDeCargaContainer.style.display = "block";
+    barraDeCargaContainer.style.display = "flex";
+    barraDeCargaContainer.style.flexDirection = "column";
+    barraDeCargaContainer.style.alignItems = "center";
 
     setTimeout(function() {
         // Ocultar el elemento
